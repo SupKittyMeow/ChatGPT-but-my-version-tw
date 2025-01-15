@@ -12,7 +12,7 @@ SESSION_ID = os.environ['SCRATCH_SESSION_ID'] # if this doesn't work, switch bac
 CHARS = [''] * 9 + [' '] + ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '`', '~', '-', '=', '.', '/', ';', '\'', '[', ']', '\\', '|', '}', '{', ':', '?', '>', '<', '_', '+', ')', '(', '*', '&', '^', '%', '$', '#', '@', '!', '\n', ',']
 
 # scratch setup
-cloud = scratch.get_tw_cloud('967781599', "A ChatGPT project in Scratch", "supkittymeow@gmail.com")
+cloud = scratch.get_tw_cloud('967781599')
 client = cloud.requests()
 
 # gemini setup
@@ -67,4 +67,4 @@ shutdown_thread.daemon = True  # allow the thread to exit when the main thread e
 shutdown_thread.start()
 
 # Run the client
-client.start()
+client.run()
