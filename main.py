@@ -12,9 +12,8 @@ SESSION_ID = os.environ['SCRATCH_SESSION_ID'] # if this doesn't work, switch bac
 CHARS = [''] * 9 + [' '] + ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '`', '~', '-', '=', '.', '/', ';', '\'', '[', ']', '\\', '|', '}', '{', ':', '?', '>', '<', '_', '+', ')', '(', '*', '&', '^', '%', '$', '#', '@', '!', '\n', ',']
 
 # scratch setup
-session = scratch.Session(SESSION_ID, username='SupKittyMeow')
-conn = session.connect_tw_cloud('967781599', "A ChatGPT project in Scratch/Turbowarp", "Scratch account: SupKittyMeow")
-client = scratch.CloudRequests(conn)
+cloud = scratch.get_tw_cloud('967781599')
+client = cloud.requests()
 
 # gemini setup
 model = genai.GenerativeModel(model_name='gemini-1.5-flash')
