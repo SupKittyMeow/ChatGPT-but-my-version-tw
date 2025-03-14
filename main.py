@@ -16,7 +16,7 @@ cloud = scratch.get_tw_cloud('967781599')
 client = cloud.requests()
 
 # gemini setup
-model = genai.GenerativeModel(model_name='gemini-1.5-flash')
+model = genai.GenerativeModel(model_name='gemini-2.0-flash-lite')
 genai.configure(api_key=GOOGLE_API_KEY)
 
 
